@@ -11,6 +11,12 @@
  *
  * NOTE: getUser() ko yahan call karna zaroori hai — yeh token refresh trigger karta hai.
  */
+
+
+export const runtime = "edge";
+
+
+
 import { NextResponse } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 
