@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/*
+ * Aivra design system — Tailwind v4 theme tokens.
+ * Wellness palette: calm teal primary, warm sand accent, deep slate ink.
+ * Tokens are exposed as Tailwind utilities via @theme (e.g. bg-brand, text-ink).
+ */
+
+:root {
+  --background: #fbfaf8;
+  --foreground: #14201f;
+
+  /* Brand scale (teal) */
+  --brand-50: #edfbf7;
+  --brand-100: #d3f4ea;
+  --brand-200: #a8e8d6;
+  --brand-300: #71d5bd;
+  --brand-400: #3bbb9f;
+  --brand-500: #1a9e86;
+  --brand-600: #0f7f6e;
+  --brand-700: #0f665a;
+  --brand-800: #11514a;
+  --brand-900: #12433e;
+
+  /* Warm accent (sand) */
+  --accent-400: #f4b366;
+  --accent-500: #ee9a3a;
+
+  --ink: #14201f;
+  --muted: #5b6b68;
+  --line: #e6e2db;
+  --surface: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a1211;
+    --foreground: #e9efed;
+    --ink: #e9efed;
+    --muted: #93a5a1;
+    --line: #1e2b29;
+    --surface: #101a19;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand: var(--brand-600);
+
+  --color-accent: var(--accent-500);
+  --color-accent-400: var(--accent-400);
+
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Respect users who prefer reduced motion (WCAG). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
