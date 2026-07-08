@@ -13,12 +13,14 @@
  */
 
 
-export const runtime = "edge";
 
 
 
 import { NextResponse } from "next/server";
 import { createServerClient } from "@supabase/ssr";
+
+export const runtime = "edge";
+
 
 export async function proxy(request) {
   // Default response — isi par hum refreshed cookies chipkayenge.
